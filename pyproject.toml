@@ -1,0 +1,33 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "deeptracker"
+version = "1.0.0"
+description = "Deep-tech funding round & valuation tracker for Indian startups"
+readme = "README.md"
+license = { text = "Proprietary" }
+requires-python = ">=3.9"
+authors = [{ name = "Bhupendra Gurjar", email = "bgurjar05.bg@gmail.com" }]
+keywords = ["deep-tech", "venture-capital", "funding", "india", "semiconductors",
+            "space-tech", "startups", "valuation"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Financial and Insurance Industry",
+    "Programming Language :: Python :: 3",
+]
+dependencies = ["click>=8.0"]
+
+[project.optional-dependencies]
+rich = ["rich>=13.0"]
+dev = ["pytest>=7.0"]
+
+[project.scripts]
+deeptracker = "deeptracker.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/bhupendra05/deeptracker"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
